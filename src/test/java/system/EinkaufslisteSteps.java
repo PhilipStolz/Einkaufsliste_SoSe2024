@@ -69,8 +69,7 @@ public class EinkaufslisteSteps implements SchnittstelleZumKonsument {
 
 	@Then("die Einkaufsliste sollte {int} Einträge enthalten")
 	public void die_einkaufsliste_sollte_eintraege_enthalten(Integer anzahlEintraege) {
-		// Write code here that turns the phrase above into concrete actions
-		throw new io.cucumber.java.PendingException();
+		assertEquals((long) anzahlEintraege, einkaufsliste.size());
 	}
 
 	@Override
