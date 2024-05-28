@@ -16,3 +16,10 @@ Feature: Einkaufsliste erstellen
       | Milch  |
       | Butter |
       | Quark  |
+
+  Scenario: Einkaufsliste enthält jeden Eintrag nur einmal
+    Given folgende Einkaufsliste:
+      | Mehl |
+      | Eier |
+    When ich schreibe "Eier" in die Einkaufsliste
+    Then die Einkaufsliste sollte 2 Einträge enthalten
